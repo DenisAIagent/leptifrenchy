@@ -1,0 +1,486 @@
+/* style.css pour Le p'tit Frenchy - Version finale avec ajustements */
+
+:root {
+    --primary-color: #005A6A; /* Bleu canard / Vert foncé */
+    --secondary-color: #FDFBF5; /* Crème/Beige clair */
+    --accent-color: #E2725B; /* Terracotta */
+    --text-color: #36454F; /* Gris anthracite */
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-logo: 'Montserrat', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: #fff; 
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem; /* Réduit pour plus de flexibilité */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 0.95rem; /* Ajustement taille police menu */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--accent-color);
+}
+
+.btn-reserv {
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 0.6rem 1.2rem; /* Ajustement padding bouton */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem; /* Ajustement taille police bouton */
+}
+
+.btn-reserv:hover {
+    background-color: #c9614d; 
+}
+
+main {
+    padding-top: 0; /* Le header est sticky, pas besoin de padding-top ici si le header a sa propre hauteur */
+}
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/exterieur_restaurant.png');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 100px 20px; /* Augmenté pour plus d'impact */
+    min-height: calc(80vh - 70px); /* 70px est une estimation de la hauteur du header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1 {
+    font-family: var(--font-logo);
+    font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#hero h2 {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+    font-style: italic;
+    border-bottom: none;
+    font-weight: normal;
+}
+
+#hero p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    max-width: 650px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.btn-reserv-main {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.btn-reserv-main:hover {
+    background-color: #c9614d;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+section:nth-of-type(even) { /* Alternance de fond pour certaines sections */
+    background-color: #fff;
+}
+
+section h2 {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.7rem;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 0.7rem auto 0;
+}
+
+#concept .concept-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajusté pour un meilleur espacement */
+    gap: 3rem;
+    text-align: left;
+    margin-top: 3.5rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#concept .concept-content p {
+    flex: 1 1 55%; /* Permet au texte de prendre plus de place si besoin */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#concept .concept-content img {
+    flex: 1 1 35%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+#plat-du-jour .plat-content h3 {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--text-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#plat-du-jour .plat-image {
+    max-width: 550px;
+    border-radius: 10px;
+    margin: 1.5rem auto 2rem auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+#plat-du-jour .prix {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+#ambiance .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ambiance .gallery img {
+    width: 100%;
+    height: 280px; /* Hauteur fixe pour harmoniser */
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    object-fit: cover; /* Assure que l'image remplit l'espace sans déformation */
+}
+
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact h2::after {
+    background-color: var(--secondary-color);
+}
+
+#contact .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 3rem auto 0 auto;
+    text-align: left;
+}
+
+#contact .contact-info {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+#contact .contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#contact .contact-info strong {
+    color: var(--secondary-color);
+}
+
+#contact .map-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+    overflow: hidden; /* Pour que le border-radius s'applique à l'iframe */
+}
+
+#contact .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#contact .btn-reserv {
+    display: block; /* Pour le centrer si besoin ou lui donner une largeur max */
+    margin: 2rem auto 0 auto; /* Centrer le bouton sous les infos */
+    width: fit-content;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: #e0e0e0; /* Couleur de texte plus claire pour le footer */
+    padding: 50px 5% 30px 5%;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-bottom: 2rem;
+}
+
+footer .social-links a {
+    margin: 0 0.8rem;
+    display: inline-block; 
+}
+
+footer .social-links img {
+    width: 32px; 
+    height: 32px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+footer .newsletter h3 {
+    font-family: var(--font-title);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    margin-bottom: 1.2rem;
+    color: white;
+    font-weight: normal;
+}
+
+footer .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    margin: 0 auto 2rem auto;
+}
+
+footer .newsletter input[type="email"] {
+    padding: 0.9rem;
+    border: 1px solid #555;
+    border-radius: 25px 0 0 25px;
+    background-color: #4a5a6a;
+    color: white;
+    flex-grow: 1;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+footer .newsletter input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+footer .newsletter button {
+    padding: 0.9rem 1.7rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+footer .newsletter button:hover {
+    background-color: #c9614d;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #b0b0b0; /* Texte copyright plus discret */
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none; /* Caché par défaut */
+    cursor: pointer;
+    /* Styles pour l'icône burger ici (ex: 3 barres) */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 992px) { /* Tablette et en dessous */
+    nav ul li {
+        margin-left: 1rem;
+    }
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    .btn-reserv {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    #concept .concept-content {
+        gap: 2rem;
+    }
+    #concept .concept-content img {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    nav ul {
+        display: none; /* Cacher le menu principal */
+        /* Logique pour afficher le menu burger ici si implémenté avec JS */
+    }
+    .menu-toggle {
+        display: block; /* Afficher l'icône burger */
+        /* Ajouter des styles pour l'icône burger */
+        /* Exemple simple: */
+        font-size: 1.5rem;
+        color: var(--primary-color);
+    }
+    /* Si le menu burger est implémenté, styler le menu déroulant ici */
+
+    #hero {
+        min-height: calc(70vh - 60px); /* Ajuster pour hauteur header mobile */
+        padding: 80px 15px 60px 15px;
+    }
+
+    #concept .concept-content {
+        flex-direction: column;
+    }
+
+    #concept .concept-content img {
+        max-width: 90%; /* Plus grand sur mobile */
+        margin-top: 2.5rem;
+    }
+
+    #ambiance .gallery {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    #ambiance .gallery img {
+        height: auto; /* Hauteur auto pour les images en pleine largeur */
+        max-height: 300px;
+    }
+
+    #contact .contact-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    #contact .map-container {
+        height: 250px;
+    }
+
+    footer .newsletter form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    footer .newsletter input[type="email"],
+    footer .newsletter button {
+        border-radius: 25px;
+        width: 100%;
+        max-width: 300px; /* Limiter la largeur sur mobile */
+    }
+}
+
+/* Icônes sociales SVG en ligne pour éviter les problèmes de chargement d'images */
+.social-icon {
+    width: 32px;
+    height: 32px;
+    fill: #e0e0e0; /* Couleur de base des icônes */
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    fill: var(--accent-color); /* Changement de couleur au survol */
+    transform: scale(1.1);
+}
+
+

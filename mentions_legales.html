@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Le p'tit Frenchy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo Le p'tit Frenchy"></a>
+            </div>
+            <ul>
+                <li><a href="index.html#concept">Notre Concept</a></li>
+                <li><a href="index.html#plat-du-jour">Plat du Jour</a></li>
+                <li><a href="index.html#ambiance">Ambiance</a></li>
+                <li><a href="index.html#contact">Nous Trouver</a></li>
+                <li><a href="#" class="btn-reserv" id="thefork-link-legal">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="legal-notice" style="text-align: left; max-width: 800px; margin: 40px auto;">
+            <h2>Mentions Légales</h2>
+            
+            <h3>1. Informations Éditeur</h3>
+            <p><strong>Nom du restaurant :</strong> Le p'tit Frenchy</p>
+            <p><strong>Adresse :</strong> Rua Augusta, 123, 1100-048 Lisboa (Exemple - à compléter par l'utilisateur)</p>
+            <p><strong>Téléphone :</strong> +351 210 000 000 (Exemple - à compléter par l'utilisateur)</p>
+            <p><strong>Email :</strong> bonjour@leptitfrenchy.pt (Exemple - à compléter par l'utilisateur)</p>
+            <p><strong>Forme juridique :</strong> (À compléter par l'utilisateur, ex: Unipessoal Lda., Sociedade por Quotas)</p>
+            <p><strong>NIF/NIPC :</strong> (À compléter par l'utilisateur)</p>
+            <p><strong>Responsable de la publication :</strong> (Nom du gérant ou de la société - à compléter par l'utilisateur)</p>
+
+            <h3>2. Hébergement du site</h3>
+            <p>Ce site est hébergé par GitHub Pages (si déployé via GitHub).</p>
+            <p><strong>Si hébergement différent, fournir les informations :</strong></p>
+            <p>Nom de l'hébergeur : (À compléter par l'utilisateur)</p>
+            <p>Adresse de l'hébergeur : (À compléter par l'utilisateur)</p>
+            <p>Téléphone de l'hébergeur : (À compléter par l'utilisateur)</p>
+
+            <h3>3. Propriété Intellectuelle</h3>
+            <p>L'ensemble de ce site relève de la législation portugaise et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+            <p>Le logo "Le p'tit Frenchy" et les images utilisées sur ce site sont la propriété de leurs détenteurs respectifs et ne peuvent être reproduits sans autorisation.</p>
+
+            <h3>4. Données Personnelles</h3>
+            <p>Les informations recueillies via le formulaire d'inscription à la newsletter sont destinées à Le p'tit Frenchy pour vous envoyer des informations sur nos actualités et offres. Conformément à la loi "Informatique et Libertés" et au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour l'exercer, adressez-vous à bonjour@leptitfrenchy.pt (Exemple).</p>
+            <p>Pour plus d'informations sur la gestion de vos données personnelles via notre service de newsletter (Brevo/Mailjet), veuillez consulter leur politique de confidentialité respective.</p>
+            <p>Les réservations effectuées via TheFork sont soumises à la politique de confidentialité de TheFork.</p>
+
+            <h3>5. Cookies</h3>
+            <p>Ce site peut être amené à utiliser des cookies pour améliorer l'expérience utilisateur et réaliser des statistiques de visites. Vous pouvez configurer votre navigateur pour refuser les cookies.</p>
+
+            <h3>6. Limitation de responsabilité</h3>
+            <p>Le p'tit Frenchy s'efforce d'assurer au mieux de ses possibilités, l'exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de corriger, à tout moment et sans préavis, le contenu. Toutefois, Le p'tit Frenchy ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à la disposition sur ce site.</p>
+            <p>En conséquence, Le p'tit Frenchy décline toute responsabilité pour toute interruption du site, survenance de bogues, pour toute inexactitude ou omission portant sur des informations disponibles sur le site, pour tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à la disposition sur le site.</p>
+
+            <p style="margin-top: 30px;"><a href="index.html">Retour à l'accueil</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook_icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" aria-label="Instagram"><img src="images/instagram_icon.png" alt="Instagram"></a>
+        </div>
+        <div class="newsletter">
+            <h3>Restons en Contact !</h3>
+            <form id="newsletter-form-legal">
+                <input type="email" name="email" placeholder="Votre adresse email" required>
+                <button type="submit" id="brevo-mailjet-link-legal">Je m'abonne</button>
+            </form>
+        </div>
+        <p>&copy; 2025 Le p'tit Frenchy - Tous droits réservés.</p>
+        <p><a href="mentions_legales.html">Mentions Légales</a></p>
+    </footer>
+    <script>
+        // Placeholder for TheFork and Newsletter links - to be updated by user
+        const theForkURL = "https://www.thefork.pt/restaurant/le-ptit-frenchy-rXXXXXX"; // EXAMPLE URL
+        const newsletterURL = "https://app.brevo.com/subscribe/XXXXX"; // EXAMPLE URL
+
+        document.getElementById('thefork-link-legal').href = theForkURL;
+
+        const newsletterFormLegal = document.getElementById('newsletter-form-legal');
+        newsletterFormLegal.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            window.open(newsletterURL, '_blank');
+        });
+    </script>
+</body>
+</html>
